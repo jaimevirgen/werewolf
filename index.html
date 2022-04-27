@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>WEREWOLF</title>
+  <meta name="description" content="A simple card game.">
+  <meta name="author" content="Jaime Virgen">
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="">
+
+  <div id='menu-container' class="menu-container">
+    <ul class="auto-grid">
+      <li class="char-btn" id="impostor" onClick="toggle_select(this.id)">Impostor</li>
+      <li class="char-btn" id="lobo" onClick="toggle_select(this.id)">Hombre Lobo</li>
+      <li class="char-btn" id="minion" onClick="toggle_select(this.id)">Minion</li>
+      <li class="char-btn" id="mason" onClick="toggle_select(this.id)">Mason</li>
+      <li class="char-btn" id="vidente" onClick="toggle_select(this.id)">Vidente</li>
+      <li class="char-btn" id="ladron" onClick="toggle_select(this.id)">Ladron</li>
+      <li class="char-btn" id="traviesa" onClick="toggle_select(this.id)">Traviesa</li>
+      <li class="char-btn" id="borracho" onClick="toggle_select(this.id)">Borracho</li>
+      <li class="char-btn" id="sonambulo" onClick="toggle_select(this.id)">Sonambulo</li>
+      <li class="strt-btn" id="start" onClick="start_game(this.id)"> ✔ </li>
+    </ul>
+  </div>
+
+  <audio controls id="player" style="display: none">
+      <source  src="#"></source>
+  </audio>
+
+  <div id="loading_box" class="loading_box hide">
+    <div class="loading">
+      <span></span>
+      <span></span>
+      <span></span>
+      <h2>...</h2>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
