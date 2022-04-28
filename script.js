@@ -4,30 +4,44 @@ char_list = []
 function toggle_select(clicked_id){
     var element = document.getElementById(clicked_id);
     element.classList.toggle("selected");
-    char_list.push(clicked_id)
-    console.log(char_list)
+    char_list.includes(clicked_id) ? char_list.pop(clicked_id) : char_list.push(clicked_id);
   }
 
 function start_game(){
+  var element = document.getElementById('menu-container');
+  element.classList.toggle("hide");
+  var element2 = document.getElementById('loading_box');
+  element2.classList.toggle("hide");
   char_list.push('outro');
   char_list.unshift('intro');
   playNote()
 }
 
 function begin_timer(){
-  var element = document.getElementById('menu-container');
-  element.classList.toggle("hide");
-  var element2 = document.getElementById('loading_box');
-  element2.classList.toggle("hide");
-  console.log('begin timer')
   setTimeout(() => {
+    var element2 = document.getElementById('loading_box');
     element2.classList.toggle("flashing-background");
     // last call
-  }, 60000);
-  
-
+    index = 0;
+    char_list = ['last'];
+    playNote()
+    end_game()
+  }, 600000);
 }
 
+function end_game() {
+  setTimeout(() => {
+    location.reload()
+    var element = document.getElementById('menu-container');
+    element.classList.toggle("hide");
+    var element2 = document.getElementById('loading_box');
+    element2.classList.toggle("hide");
+    element2.classList.toggle("flashing-background");
+    // reset variables
+    index = 0;
+    char_list = [];
+  }, 62500);
+}
 
 
 var index = 0;
@@ -35,8 +49,6 @@ var notes = char_list;
 var player = document.getElementById('player');
 
 function playNote() {
-
-  console.log(index)
 
   if (index >= (char_list.length)) {
     stop();

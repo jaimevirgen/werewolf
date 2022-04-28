@@ -100,7 +100,7 @@ li {
 
 @keyFrames backgroundFlash {
   0% {
-    background-color: red;
+    background-color: black;
   }
   10% {
     background-color: white;
@@ -112,25 +112,73 @@ li {
     background-color: white;
   }
   40% {
-    background-color: red;
+    background-color: black;
   }
   50% {
     background-color: white;
   }
+  53% {
+    background-color: black;
+  }
+  56% {
+    background-color: red;
+  }
   60% {
     background-color: black;
+  }
+  63% {
+    background-color: black;
+  }
+  66% {
+    background-color: red;
   }
   70% {
     background-color: white;
   }
+  73% {
+    background-color: black;
+  }
+  76% {
+    background-color: red;
+  }
   80% {
+    background-color: red;
+  }
+  81% {
+    background-color: black;
+  }
+  82% {
+    background-color: red;
+  }
+  84% {
+    background-color: white;
+  }
+  86% {
+    background-color: black;
+  }
+  88% {
     background-color: red;
   }
   90% {
     background-color: white;
   }
-  100% {
+  91% {
+    background-color: black;
+  }
+  92% {
     background-color: red;
+  }
+  94% {
+    background-color: white;
+  }
+  96% {
+    background-color: black;
+  }
+  98% {
+    background-color: red;
+  }
+  100% {
+    background-color: white;
   }
 }
 
