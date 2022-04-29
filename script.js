@@ -26,7 +26,7 @@ function begin_timer(){
     char_list = ['last'];
     playNote()
     end_game()
-  }, 600000);
+  }, 300000);
 }
 
 function end_game() {
